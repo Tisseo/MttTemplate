@@ -1,0 +1,9 @@
+layout:
+    label: Template par défaut
+    orientation: 0
+    previewFileName: preview.png
+templates:
+    stop:
+        file: 'stop.html.twig'
+    line:
+        file: 'line.html.twig'
