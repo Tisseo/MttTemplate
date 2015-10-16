@@ -103,7 +103,7 @@
 {% endmacro %}
 
 {# params string colorAltern    how to style timegrid, color direction, line or column #}
-{% macro calendar(dom_id, stopPointLevel, externalNetworkId, timetable, layout, block, calendar, notes, hours_range, linesMin, notesType, colorAltern = 'line') %}
+{% macro calendar(dom_id, stopPointLevel, externalNetworkId, stopTimetable, layout, block, calendar, notes, hours_range, linesMin, notesType, colorAltern = 'line') %}
     {% if linesMin is empty %}
         {% set loopMax = calendar|calendarMax %}
     {% else %}
@@ -123,7 +123,7 @@
                                     'canal_tp_mtt_block_edit',
                                     {
                                         'externalNetworkId':externalNetworkId,
-                                        'timetableId': timetable.id,
+                                        'stopTimetableId': stopTimetable.id,
                                         'dom_id' : dom_id,
                                         'blockId' : block.id,
                                         'block_type' : 'calendar'
@@ -153,7 +153,7 @@
                                     'canal_tp_mtt_block_delete',
                                     {
                                         'externalNetworkId':externalNetworkId,
-                                        'timetableId': timetable.id,
+                                        'stopTimetableId': stopTimetable.id,
                                         'blockId': block.id
                                     }
                                 )
